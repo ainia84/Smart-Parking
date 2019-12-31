@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device=width">
+  <title>Smart Parking</title>
+  <style>
+    body {
+      background-image: url("tempatparkir.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+    var i = 0;
+    socket.on('showrows', function (rows) {
+      receiveData(rows);
+    });
+    function receiveData(rows) {
+      // var html = '';
+      // var html1 = '';
+      var html2 = '';
+      var html3 = '';
+      // html += rows[i].karcis + '<br>';
+      // html1 += rows[i].plat + '<br>';
+      if (rows[0] != null){
+      html2 += rows[i].masuk + '<br>';
+      if (rows[i].keluar == null)
+        rows[i].keluar = 0
+      html3 += rows[i].keluar + '<br>';
+      // document.getElementById("test").innerHTML = html;
+      // document.getElementById("test1").innerHTML = html1;
+      document.getElementById("test2").innerHTML = html2;
+      document.getElementById("test3").innerHTML = html3;
+    } else {
+      document.getElementById("test2").innerHTML = 0;
+      document.getElementById("test3").innerHTML = 0;
+    }
+      console.log(rows);
+
+      setTimeout(() => {
+        receiveData(rows),
+          i++;
+      }, 10);
+    }
+  </script>
+</head>
+
+<body>
+<!--   <div class="menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="page4.html">About Us</a></li>
+      <li><a href="page3.html">Contact Us</a></li>
+    </ul>
+  </div>  -->
+  <div class="grid home" id="home">
+    <div class="space">
+      <ul>
+        <div class="box2">
+      <h1><a>DATA MOBIL MASUK DAN KELUAR DARI AREA PARKIR</a></h1></div></ul>
+      <br><br><br><br><br><br>
+      <!-- <div class="box">
+        Data Sensor Suhu
+        <div id="test"></div>
+      </div>
+      <div class="box">
+        Data Sensor Ph
+        <div id="test1"></div>
+      </div> -->
+      <div class="box">
+        Jumlah Kendaraan yang Masuk
+        <div id="test2"></div>
+      </div>
+      <div class="box">
+        Jumlah Kendaraan yang Keluar
+        <div id="test3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+* {
+ font-family:Times New Roman; 
+  margin:0px;
+}
+
+.logo {
+  background: transparent;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-bottom:0px;
+  padding-right: 0px;
+  height:300px;
+  width: 300px;
+  display: flex;
+}
+
+.ltext{
+  text-decoration:none;
+  color: black;
+  display: flex;
+}
+
+.box{
+  width:500px;
+  height:200px;
+  background:blue;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.box div{
+  font-size: 3cm;
+}
+
+.box2{
+  width:1000px;
+  height:50px;
+  background:#696969;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.ltext button{
+  margin-left: 280px;
+}
+
+.logo img{
+  padding-left: 130px;
+}
+
+.lback{
+  background:rgba(255, 255, 255, 0.6);
+}
+
+.test{
+  color: black;
+}
+.menu {
+  background: rgba(250, 250, 250, 0.55);
+  color: rgb(82, 77, 77);
+  height:35px;
+  width:100%;
+}
+
+.menu ul li {
+  list-style-type: none;
+  float:left;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-left:15px;
+  margin-right:15px;
+  font-size:17px;
+  margin-bottom:0px;
+  padding-bottom:0px;  
+}
+
+.menu ul li a {
+  text-decoration:none;
+  color: rgb(61, 60, 60);
+}
+
+
+.grid {
+  margin-top:0px;
+  padding-top:0px;
+  width:100%;
+  height:550px;  
+}
+
+.home{
+  color:white;  
+}
+
+.space {
+  text-align:center;
+  padding-top:100px;
+}
+
+hr {
+  width:150px;  
+}
+
+.about_us {
+  background:grey;
+  color:white; 
+}
+
+.about_us p {
+  margin-top:15px;
+  margin-left: 150px;
+  margin-right:150px;
+}
+
+.contact_us {
+  background:purple;
+  color:white;
+
+}
+
+input[type=text], [type=number], [type=email], textarea {
+  width:20%;
+}
+
+label {
+
+
+    padding-left:26px;
+    width:125px;
+    text-transform: uppercase;
+    display:inline-block
+}
+

@@ -1,0 +1,4 @@
+database 
+1. mysql -u root -p
+2. use parkir
+3. select * from smartp
